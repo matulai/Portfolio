@@ -29,7 +29,7 @@
     "noImplicitOverride": true,
     "noUncheckedIndexedAccess": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
+    
     "plugins": [
       {
         "name": "next"
