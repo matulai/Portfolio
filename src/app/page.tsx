@@ -1,17 +1,17 @@
+import AnimatedTitle from "@/components/AnimatedTitle";
+
 export default function Home() {
   return (
     <main className="flex flex-col flex-1 justify-self-start h-full py-14 px-32 gap-14">
-      <h1 className="text-7xl drop-shadow-[8px_8px_2px_rgba(211,211,211,0.25)] tracking-[0.75rem]">
-        SOBRE MÍ
-      </h1>
-      <section className="flex flex-col flex-1 justify-self-start gap-14">
+      <AnimatedTitle text="SOBRE MÍ" />
+      <section className="flex flex-col flex-1 justify-self-start gap-14 animate-fadeIn">
         <div>
           <h2 className="text-5xl">Matias Laime</h2>
           <h3 className="text-4xl">Desarrollador de software</h3>
         </div>
-        <div className="bg-dark-medium">
-          <div className="bg-grey-dark flex justify-self-start w-full h-fit py-2 px-2.5">
-            <span className="bg-dark-medium h-8 w-8"></span>
+        <div className="flex flex-col bg-dark-medium">
+          <div className="bg-grey-dark flex justify-self-start h-fit py-2 px-2.5">
+            <span className="bg-dark-medium h-8 w-8" />
           </div>
           <div className="py-9 px-12 text-3xl">
             <p>
