@@ -1,85 +1,120 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import Chevron from "@/components/Chevron";
 import Proyect from "@/types/proyect";
 
 interface CarouselProps {
   proyects: Proyect[];
+  setSelectedProyect: (proyect: Proyect) => void;
 }
 
-const Carousel = ({ proyects }: CarouselProps) => {
+const Carousel = ({ proyects, setSelectedProyect }: CarouselProps) => {
   const [items, setItems] = useState(proyects);
-  const [direction, setDirection] = useState<"up" | "down">("down");
+  const [isAnimating, setIsAnimating] = useState(false);
+  const offsetRef = useRef(0);
 
-  const handleNextClick = () => {
-    if (items.length > 5) {
-      const newList = [...items];
-      const first = newList.shift();
-      setItems([...newList, first!]);
-      setDirection("down");
+  const rotateItems = (count: number) => {
+    if (isAnimating) return;
+
+    setIsAnimating(true);
+
+    const newItems = [...items];
+    let nextItems;
+    if (count > 0) {
+      const moved = newItems.splice(0, count);
+      nextItems = [...newItems, ...moved];
+    } else {
+      const abs = Math.abs(count);
+      const moved = newItems.slice(-abs);
+      const remaining = newItems.slice(0, -abs);
+      nextItems = [...moved, ...remaining];
     }
+
+    setItems(nextItems);
+    setSelectedProyect(nextItems[2]!);
+
+    offsetRef.current = count;
+    // To prevent the animation from being triggered again immediately
+    setTimeout(() => setIsAnimating(false), 300);
+  };
+
+  const handleOnClick = (index: number) => {
+    if (index === 2 || isAnimating) return;
+    const count = index - 2;
+    rotateItems(count);
   };
 
   const handlePrevClick = () => {
-    if (items.length > 5) {
-      const newList = [...items];
-      const last = newList.pop();
-      setItems([last!, ...newList]);
-      setDirection("up");
-    }
+    if (isAnimating) return;
+    rotateItems(-1);
+  };
+
+  const handleNextClick = () => {
+    if (isAnimating) return;
+    rotateItems(1);
   };
 
   const variants = {
-    initial: (dir: "up" | "down") => ({
+    initial: (custom: number) => ({
       opacity: 0,
-      y: dir === "down" ? 88 : -88,
+      y: 88 * custom,
     }),
-    animate: {
+    animate: (_custom: number) => ({
       opacity: 1,
       y: 0,
-    },
-    exit: (dir: "up" | "down") => ({
+    }),
+    exit: (custom: number) => ({
       opacity: 0,
-      y: dir === "down" ? -88 : 88,
+      y: -88 * custom,
     }),
   };
 
   return (
-    <div className="relative flex flex-col justify-center max-w-lg w-full px-6 py-14 gap-6 h-[548px]">
-      <div className="overflow-hidden flex-1 flex flex-col justify-center items-center gap-6">
-        <AnimatePresence mode="popLayout" custom={direction}>
-          {items.slice(0, 5).map(proyect => (
-            <motion.button
-              key={proyect.id}
-              className="py-3 h-fit w-full flex items-center justify-center bg-dark-light"
-              custom={direction}
-              variants={variants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              transition={{ duration: 0.2 }}
-              layout
-            >
-              <span className="text-4xl truncate">{proyect.description}</span>
-            </motion.button>
-          ))}
+    <div className="relative flex flex-col justify-center items-center max-w-lg w-full px-6 gap-6 h-fit">
+      <button
+        onClick={handlePrevClick}
+        className="bg-dark-light w-12 h-12 rounded-full cursor-pointer flex items-center justify-center hover:bg-grey-dark hover:text-black"
+      >
+        <Chevron />
+      </button>
+      <div className="overflow-hidden flex-1 flex flex-col items-center gap-6 w-full">
+        <AnimatePresence mode="popLayout" custom={offsetRef.current}>
+          {items.slice(0, 5).map((proyect, index) => {
+            const isActive = index === 2;
+
+            return (
+              <motion.button
+                key={proyect.id}
+                className={`py-3 h-fit flex items-center justify-center cursor-pointer w-3/4 ${isActive ? "w-full bg-grey-dark text-black" : "bg-dark-light"} hover:bg-grey-dark hover:text-black`}
+                onClick={() => handleOnClick(index)}
+                custom={offsetRef.current}
+                variants={variants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                transition={{ duration: 0.3 }}
+                layout
+              >
+                <motion.span
+                  className="text-4xl truncate"
+                  layout
+                  transition={{ duration: 0.3 }}
+                >
+                  {proyect.title}
+                </motion.span>
+              </motion.button>
+            );
+          })}
         </AnimatePresence>
       </div>
-      <div className="absolute inset-0 flex flex-col justify-between items-center z-10">
-        <button
-          onClick={handlePrevClick}
-          className="bg-dark-light w-12 h-12 rounded-full"
-        >
-          ↑
-        </button>
-        <button
-          onClick={handleNextClick}
-          className="bg-dark-light w-12 h-12 rounded-full"
-        >
-          ↓
-        </button>
-      </div>
+      <button
+        onClick={handleNextClick}
+        className="bg-dark-light w-12 h-12 rounded-full cursor-pointer flex items-center justify-center hover:bg-grey-dark hover:text-black"
+      >
+        <Chevron className="rotate-180" />
+      </button>
     </div>
   );
 };
