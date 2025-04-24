@@ -23,10 +23,12 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${inter.variable} antialiased bg-dark-hard w-screen min-h-screen flex flex-col text-grey-light`}
+        className={`flex flex-col w-screen min-h-screen ${inter.variable} antialiased bg-dark-hard text-grey-light`}
       >
         <Navbar />
-        {children}
+        <main className="flex flex-col flex-1 justify-self-start gap-14 py-14 px-32 border-b border-t border-grey-light">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

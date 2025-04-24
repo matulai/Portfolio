@@ -1,8 +1,9 @@
 import AnimatedTitle from "@/components/AnimatedTitle";
+import PageInfo from "@/components/PageInfo";
 
 export default function Home() {
   return (
-    <main className="flex flex-col flex-1 justify-self-start h-full py-14 px-32 gap-14">
+    <>
       <AnimatedTitle text="SOBRE MÍ" />
       <section className="flex flex-col flex-1 justify-self-start gap-14 animate-fadeIn">
         <div>
@@ -10,8 +11,8 @@ export default function Home() {
           <h3 className="text-4xl">Desarrollador de software</h3>
         </div>
         <div className="flex flex-col bg-dark-medium">
-          <div className="bg-grey-dark flex justify-self-start h-fit py-2 px-2.5">
-            <span className="bg-dark-medium h-8 w-8" />
+          <div className="flex justify-start py-2 px-2.5 bg-grey-dark">
+            <span className="h-8 w-8 bg-dark-medium" />
           </div>
           <div className="py-9 px-12 text-3xl">
             <p>
@@ -20,18 +21,12 @@ export default function Home() {
               experiecia desarrollando aplicaciones front y back en proyectos
               academicos y personales. Me apasiona crear soluciones eficientes,
               escalables y bien estructuradas, siempre buscando aprender y
-              mejorar. También me gusta desarrollar videojuegos.
+              mejorar.
             </p>
           </div>
         </div>
       </section>
-      <div className="relative py-3 px-16 text-start bg-dark-medium drop-shadow-[4px_4px_0px_rgba(211,211,211,0.2)] h-fit">
-        <div className="absolute top-0 left-0 flex gap-3 h-full w-fit">
-          <span className="h-full bg-grey-dark w-3" />
-          <span className="h-full bg-grey-dark w-1" />
-        </div>
-        <span className="text-4xl">Bienvenido a mi sitio web</span>
-      </div>
-    </main>
+      <PageInfo text="Bienvenido a mi sitio web" />
+    </>
   );
 }
