@@ -72,14 +72,14 @@ const Carousel = ({ proyects, setSelectedProyect }: CarouselProps) => {
   };
 
   return (
-    <div className="relative flex flex-col justify-center items-center max-w-lg w-full px-6 gap-6 h-fit">
+    <div className="flex flex-col justify-center items-center gap-6 px-6 max-w-lg w-full">
       <button
         onClick={handlePrevClick}
-        className="bg-dark-light w-12 h-12 rounded-full cursor-pointer flex items-center justify-center hover:bg-grey-dark hover:text-black"
+        className="flex items-center justify-center w-12 h-12 rounded-full cursor-pointer bg-dark-light hover:bg-grey-dark hover:text-black"
       >
         <Chevron />
       </button>
-      <div className="overflow-hidden flex-1 flex flex-col items-center gap-6 w-full">
+      <div className="flex flex-col items-center gap-6 w-full overflow-hidden">
         <AnimatePresence mode="popLayout" custom={offsetRef.current}>
           {items.slice(0, 5).map((proyect, index) => {
             const isActive = index === 2;
@@ -87,7 +87,7 @@ const Carousel = ({ proyects, setSelectedProyect }: CarouselProps) => {
             return (
               <motion.button
                 key={proyect.id}
-                className={`py-3 h-fit flex items-center justify-center cursor-pointer w-3/4 ${isActive ? "w-full bg-grey-dark text-black" : "bg-dark-light"} hover:bg-grey-dark hover:text-black`}
+                className={`flex justify-center py-3 w-3/4 cursor-pointer text-4xl truncate ${isActive ? "w-full scale-y-110 bg-grey-dark text-black" : "bg-dark-light"} hover:bg-grey-dark hover:text-black`}
                 onClick={() => handleOnClick(index)}
                 custom={offsetRef.current}
                 variants={variants}
@@ -97,11 +97,7 @@ const Carousel = ({ proyects, setSelectedProyect }: CarouselProps) => {
                 transition={{ duration: 0.3 }}
                 layout
               >
-                <motion.span
-                  className="text-4xl truncate"
-                  layout
-                  transition={{ duration: 0.3 }}
-                >
+                <motion.span layout transition={{ duration: 0.3 }}>
                   {proyect.title}
                 </motion.span>
               </motion.button>
@@ -111,7 +107,7 @@ const Carousel = ({ proyects, setSelectedProyect }: CarouselProps) => {
       </div>
       <button
         onClick={handleNextClick}
-        className="bg-dark-light w-12 h-12 rounded-full cursor-pointer flex items-center justify-center hover:bg-grey-dark hover:text-black"
+        className="flex items-center justify-center w-12 h-12 rounded-full cursor-pointer bg-dark-light hover:bg-grey-dark hover:text-black"
       >
         <Chevron className="rotate-180" />
       </button>

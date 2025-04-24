@@ -8,8 +8,8 @@ const TabSelector = ({ activeTab, setActiveTab, tabs }: TabSelectorProps) => {
   return (
     <div className="flex flex-row gap-9 max-w-xl w-full">
       <div className="flex flex-row gap-3">
-        <span className="h-full bg-grey-dark w-3" />
-        <span className="h-full bg-grey-dark w-1" />
+        <span className=" bg-grey-dark w-3" />
+        <span className=" bg-grey-dark w-1" />
       </div>
       <div className="flex flex-col gap-6 py-6 w-full">
         {tabs.map(tab => (
