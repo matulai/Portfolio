@@ -1,8 +1,10 @@
-type TabSelectorProps = {
-  activeTab: string;
-  setActiveTab: (tab: string) => void;
-  tabs: string[];
-};
+import type Tab from "@/types/tab";
+
+interface TabSelectorProps {
+  activeTab: Tab;
+  setActiveTab: (tab: Tab) => void;
+  tabs: Tab[];
+}
 
 const TabSelector = ({ activeTab, setActiveTab, tabs }: TabSelectorProps) => {
   return (
@@ -14,7 +16,7 @@ const TabSelector = ({ activeTab, setActiveTab, tabs }: TabSelectorProps) => {
       <div className="flex flex-col gap-6 py-6 w-full">
         {tabs.map(tab => (
           <button
-            key={tab}
+            key={tab.label}
             onClick={() => setActiveTab(tab)}
             className={`px-4 py-3 text-left text-4xl cursor-pointer hover:bg-grey-dark hover:text-black ${
               activeTab === tab
@@ -22,7 +24,7 @@ const TabSelector = ({ activeTab, setActiveTab, tabs }: TabSelectorProps) => {
                 : "bg-dark-light"
             }`}
           >
-            {tab}
+            {tab.label}
           </button>
         ))}
       </div>

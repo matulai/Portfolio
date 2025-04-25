@@ -1,3 +1,4 @@
+"use client";
 import Send from "@/components/Send";
 
 export default function ContactForm() {

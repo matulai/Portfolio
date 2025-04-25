@@ -1,3 +1,4 @@
+"use client";
 import Download from "@/components/Download";
 import Image from "next/image";
 
