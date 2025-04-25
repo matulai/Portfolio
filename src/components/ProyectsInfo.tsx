@@ -1,8 +1,8 @@
 "use client";
+import { useState } from "react";
 import ProyectCard from "@/components/ProyectCard";
 import Carousel from "@/components/Carousel.tsx";
-import Proyect from "@/types/proyect.ts";
-import { useState } from "react";
+import type Proyect from "@/types/proyect.ts";
 
 const proyects: Proyect[] = [
   {

@@ -1,9 +1,8 @@
 "use client";
-
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef } from "react";
 import Chevron from "@/components/Chevron";
-import Proyect from "@/types/proyect";
+import type Proyect from "@/types/proyect";
 
 interface CarouselProps {
   proyects: Proyect[];

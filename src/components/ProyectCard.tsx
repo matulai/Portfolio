@@ -1,4 +1,4 @@
-import Proyect from "@/types/proyect";
+import type Proyect from "@/types/proyect";
 import Image from "next/image";
 
 interface ProyectCardProps {
