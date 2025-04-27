@@ -60,6 +60,7 @@ const Carousel = ({ proyects, setSelectedProyect }: CarouselProps) => {
       opacity: 0,
       y: 88 * custom,
     }),
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     animate: (_custom: number) => ({
       opacity: 1,
       y: 0,
