@@ -26,7 +26,7 @@ const AnimatedTitle = ({ text }: AnimatedTitleProps) => {
   const arrayText = text.split("");
 
   return (
-    <h1 className="flex flex-row gap-3 drop-shadow-[8px_8px_2px_rgba(211,211,211,0.25)] text-6xl 2xl:text-7xl 2xl:gap-4">
+    <h1 className="flex flex-row gap-1 text-4xl drop-shadow-[8px_8px_2px_rgba(211,211,211,0.25)] md:gap-2 md:text-5xl lg:text-6xl lg:gap-3 2xl:text-7xl 2xl:gap-4">
       {arrayText.map((letter, index) => (
         <span
           key={index}

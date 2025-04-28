@@ -11,7 +11,7 @@ const ContactoPage = ({ tabs }: ContactoPageProps) => {
   const [activeTab, setActiveTab] = useState<Tab>(tabs[0]!);
 
   return (
-    <section className="flex flex-row flex-1 items-center justify-between animate-fadeIn">
+    <section className="flex flex-col flex-1 items-center justify-between gap-6 animate-fadeIn md:flex-row">
       <TabSelector
         tabs={tabs}
         activeTab={activeTab}

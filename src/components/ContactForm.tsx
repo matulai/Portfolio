@@ -3,7 +3,7 @@ import Send from "@/components/Send";
 
 export default function ContactForm() {
   return (
-    <form className="flex flex-col gap-4 px-6 py-4">
+    <form className="flex flex-col gap-3 px-6 py-4">
       <input
         type="text"
         placeholder="Nombre"

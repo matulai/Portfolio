@@ -72,7 +72,7 @@ const Carousel = ({ proyects, setSelectedProyect }: CarouselProps) => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center gap-5 px-6 w-full max-w-96 2xl:max-w-lg ">
+    <div className="flex flex-col justify-center items-center gap-5 px-6 w-full max-w-80 md:max-w-96 2xl:max-w-lg ">
       <button
         onClick={handlePrevClick}
         className="flex items-center justify-center w-9 h-9 rounded-full cursor-pointer bg-dark-light hover:bg-grey-dark hover:text-black 2xl:w-12 2xl:h-12"
@@ -87,7 +87,7 @@ const Carousel = ({ proyects, setSelectedProyect }: CarouselProps) => {
             return (
               <motion.button
                 key={proyect.id}
-                className={`flex justify-center py-2 w-3/4 cursor-pointer text-2xl truncate ${isActive ? "w-full scale-y-110 bg-grey-dark text-black" : "bg-dark-light"} hover:bg-grey-dark hover:text-black 2xl:text-4xl 2xl:py-3`}
+                className={`flex justify-center py-1.5 w-3/4 cursor-pointer text-xl truncate ${isActive ? "w-full scale-y-110 bg-grey-dark text-black" : "bg-dark-light"} hover:bg-grey-dark hover:text-black md:text-2xl md:py-2 2xl:text-4xl 2xl:py-3`}
                 onClick={() => handleOnClick(index)}
                 custom={offsetRef.current}
                 variants={variants}

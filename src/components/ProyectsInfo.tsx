@@ -68,7 +68,7 @@ const ProyectsInfo = () => {
   const [selectedProyect, setSelectedProyect] = useState<Proyect>(proyects[2]!);
 
   return (
-    <section className="flex flex-row flex-1 items-center justify-between animate-fadeIn">
+    <section className="flex flex-col flex-1 items-center justify-between gap-6 animate-fadeIn md:flex-row">
       <Carousel
         proyects={proyects}
         setSelectedProyect={p => setSelectedProyect(p)}

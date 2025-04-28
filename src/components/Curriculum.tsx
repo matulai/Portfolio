@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Curriculum = () => {
   return (
-    <div className="flex flex-col gap-4 px-6 py-4">
+    <div className="flex flex-col gap-3 px-6 py-4">
       <div className="relative flex-1 aspect-video">
         <Image
           src="/images/curriculum.webp"
