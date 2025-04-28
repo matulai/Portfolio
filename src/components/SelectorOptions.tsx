@@ -19,7 +19,7 @@ const ContactoPage = ({ tabs }: ContactoPageProps) => {
       />
       <div
         key={activeTab.label}
-        className="flex flex-col max-w-3xl w-full bg-dark-medium animate-fadeIn"
+        className="flex flex-col max-w-lg w-full bg-dark-medium animate-fadeIn 2xl:max-w-3xl"
       >
         <div className="flex justify-start py-2 px-2.5 bg-grey-dark">
           <span className="h-8 w-8 bg-dark-medium" />

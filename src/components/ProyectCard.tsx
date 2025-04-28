@@ -7,7 +7,7 @@ interface ProyectCardProps {
 
 const ProyectCard = ({ proyect }: ProyectCardProps) => {
   return (
-    <div className="flex flex-col gap-3 p-4">
+    <div className="flex flex-col gap-3 p-4 text-sm 2xl:text-lg leading-none">
       <div className="relative flex-1 aspect-video">
         <Image
           src={proyect.image}
@@ -18,14 +18,14 @@ const ProyectCard = ({ proyect }: ProyectCardProps) => {
           priority={true}
         />
       </div>
-      <p className="px-4 py-2 border-t border-b border-grey-light">
+      <p className="py-2 border-t border-b border-grey-light">
         {proyect.description}
       </p>
       <div className="flex items-center gap-1.5">
         {proyect.tags.map((tag, index) => (
           <span
             key={index}
-            className="text-center p-1.5 w-28 border rounded-full border-grey-light"
+            className="text-center p-1.5 w-24 border rounded-full border-grey-light 2xl:w-28"
           >
             {tag}
           </span>

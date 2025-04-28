@@ -72,14 +72,14 @@ const Carousel = ({ proyects, setSelectedProyect }: CarouselProps) => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center gap-6 px-6 max-w-lg w-full">
+    <div className="flex flex-col justify-center items-center gap-5 px-6 w-full max-w-96 2xl:max-w-lg ">
       <button
         onClick={handlePrevClick}
-        className="flex items-center justify-center w-12 h-12 rounded-full cursor-pointer bg-dark-light hover:bg-grey-dark hover:text-black"
+        className="flex items-center justify-center w-9 h-9 rounded-full cursor-pointer bg-dark-light hover:bg-grey-dark hover:text-black 2xl:w-12 2xl:h-12"
       >
         <Chevron />
       </button>
-      <div className="flex flex-col items-center gap-6 w-full overflow-hidden">
+      <div className="flex flex-col items-center gap-5 w-full overflow-hidden">
         <AnimatePresence mode="popLayout" custom={offsetRef.current}>
           {items.slice(0, 5).map((proyect, index) => {
             const isActive = index === 2;
@@ -87,7 +87,7 @@ const Carousel = ({ proyects, setSelectedProyect }: CarouselProps) => {
             return (
               <motion.button
                 key={proyect.id}
-                className={`flex justify-center py-3 w-3/4 cursor-pointer text-4xl truncate ${isActive ? "w-full scale-y-110 bg-grey-dark text-black" : "bg-dark-light"} hover:bg-grey-dark hover:text-black`}
+                className={`flex justify-center py-2 w-3/4 cursor-pointer text-2xl truncate ${isActive ? "w-full scale-y-110 bg-grey-dark text-black" : "bg-dark-light"} hover:bg-grey-dark hover:text-black 2xl:text-4xl 2xl:py-3`}
                 onClick={() => handleOnClick(index)}
                 custom={offsetRef.current}
                 variants={variants}
@@ -107,7 +107,7 @@ const Carousel = ({ proyects, setSelectedProyect }: CarouselProps) => {
       </div>
       <button
         onClick={handleNextClick}
-        className="flex items-center justify-center w-12 h-12 rounded-full cursor-pointer bg-dark-light hover:bg-grey-dark hover:text-black"
+        className="flex items-center justify-center w-9 h-9 rounded-full cursor-pointer bg-dark-light hover:bg-grey-dark hover:text-black 2xl:w-12 2xl:h-12"
       >
         <Chevron className="rotate-180" />
       </button>

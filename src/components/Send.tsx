@@ -1,16 +1,15 @@
 const Send = () => {
   return (
     <svg
-      width="24"
-      height="25"
-      viewBox="0 0 24 25"
+      viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="w-6 h-6 2xl:w-8 2xl:h-8"
     >
       <path
-        d="M3 20.5V4.5L22 12.5L3 20.5ZM5 17.5L16.85 12.5L5 7.5V11L11 12.5L5 14V17.5ZM5 17.5V12.5V7.5V11V14V17.5Z"
+        d="M4 26.6666V5.33331L29.3333 16L4 26.6666ZM6.66667 22.6666L22.4667 16L6.66667 9.33331V14L14.6667 16L6.66667 18V22.6666ZM6.66667 22.6666V16V9.33331V14V18V22.6666Z"
         fill="currentColor"
-        fillOpacity="0.9"
+        opacity="0.9"
       />
     </svg>
   );

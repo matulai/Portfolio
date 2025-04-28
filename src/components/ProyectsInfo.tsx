@@ -29,7 +29,8 @@ const proyects: Proyect[] = [
   {
     id: 1,
     title: "My Anime Info",
-    description: "description 1",
+    description:
+      "This is an anime info app, it uses the Jikan API to get the data and React to build the UI and TypeScript to type the data.",
     image: "/images/my-anime-info.webp",
     tags: ["React", "TypeScript"],
   },
@@ -74,7 +75,7 @@ const ProyectsInfo = () => {
       />
       <div
         key={selectedProyect.id}
-        className="flex flex-col max-w-3xl w-full animate-fadeIn bg-dark-medium"
+        className="flex flex-col max-w-lg w-full animate-fadeIn bg-dark-medium 2xl:max-w-3xl"
       >
         <div className="flex justify-start py-2 px-2.5 bg-grey-dark">
           <span className="h-8 w-8 bg-dark-medium" />

@@ -23,10 +23,10 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`flex flex-col w-screen min-h-screen ${inter.variable} antialiased bg-dark-hard text-grey-light`}
+        className={`flex flex-col w-full min-h-screen ${inter.variable} antialiased bg-dark-hard text-grey-light`}
       >
         <Navbar />
-        <main className="flex flex-col flex-1 justify-self-start gap-14 py-14 px-32 border-b border-t border-grey-light">
+        <main className="flex flex-col flex-1 justify-start gap-9 py-9 px-20 border-b border-t border-grey-light 2xl:gap-12 2xl:py-12 2xl:px-32">
           {children}
         </main>
         <Footer />
