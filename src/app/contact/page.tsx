@@ -7,11 +7,11 @@ import PageInfo from "@/components/PageInfo";
 const tabs = [
   {
     label: "Formulario",
-    component: ContactForm,
+    component: <ContactForm />,
   },
   {
     label: "Curriculum",
-    component: Curriculum,
+    component: <Curriculum />,
   },
 ];
 

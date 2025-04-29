@@ -24,7 +24,7 @@ const ContactoPage = ({ tabs }: ContactoPageProps) => {
         <div className="flex justify-start py-2 px-2.5 bg-grey-dark">
           <span className="h-8 w-8 bg-dark-medium" />
         </div>
-        {activeTab.component()}
+        {activeTab.component}
       </div>
     </section>
   );
