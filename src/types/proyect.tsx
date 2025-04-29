@@ -3,7 +3,8 @@ interface Proyect {
   title: string;
   description: string;
   image: string;
-  tags: string[];
+  githubURL: string;
+  liveURL: string;
 }
 
 export default Proyect;
