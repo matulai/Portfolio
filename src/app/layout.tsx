@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 
 import { Inter } from "next/font/google";
 import type { Metadata } from "next";
+import Head from "next/head";
 
 import Navbar from "@/components/Navbar.tsx";
 import Footer from "@/components/Footer.tsx";
@@ -25,6 +26,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <Head>
+        <title>Matias Laime | Portfolio</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Portfolio Matias Laime" />
+        <meta name="author" content="Matias Laime" />
+        <meta name="keywords" content="portfolio, matias laime, developer" />
+      </Head>
       <body
         className={`flex flex-col w-full min-h-screen ${inter.variable} antialiased bg-dark-hard text-grey-light`}
       >
