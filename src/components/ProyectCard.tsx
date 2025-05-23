@@ -33,15 +33,17 @@ const ProyectCard = ({ proyect }: ProyectCardProps) => {
           <Github />
           <span>GitHub</span>
         </a>
-        <a
-          href={proyect.liveURL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex justify-start items-center gap-2 w-full p-1.5 cursor-pointer text-xl truncate bg-dark-light hover:bg-grey-dark hover:text-black md:text-2xl md:p-2 2xl:text-4xl 2xl:p-3"
-        >
-          <Play />
-          <span>Try</span>
-        </a>
+        {proyect.liveURL && (
+          <a
+            href={proyect.liveURL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex justify-start items-center gap-2 w-full p-1.5 cursor-pointer text-xl truncate bg-dark-light hover:bg-grey-dark hover:text-black md:text-2xl md:p-2 2xl:text-4xl 2xl:p-3"
+          >
+            <Play />
+            <span>Try</span>
+          </a>
+        )}
       </div>
     </div>
   );

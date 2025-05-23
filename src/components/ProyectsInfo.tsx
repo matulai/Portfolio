@@ -6,69 +6,59 @@ import type Proyect from "@/types/proyect.ts";
 
 const proyects: Proyect[] = [
   {
+    id: 4,
+    title: "TikTok Clone",
+    description:
+      "Aplicación web que simula la interfaz de TikTok, utiliza React y esta adaptado a mobile utilizando React Native. La API fue desarrollada con Javalin.",
+    image: "/images/tiktok.webp",
+    githubURL: "https://github.com/matulai/TikTok-model-TPs-UI",
+    liveURL: "",
+  },
+  {
+    id: 5,
+    title: "Rivals Tactics",
+    description:
+      "De la mano del motor de videojuegos Godot aparece Rivals Tactics que desafía a los jugadores a dominar el campo de batalla mediante estrategia pura y adaptabilidad",
+    image: "/images/rivals.webp",
+    githubURL: "https://github.com/matulai/videojuego-rival-tactics",
+    liveURL: "https://matulai.github.io/videojuego-rival-tactics/",
+  },
+  {
     id: 6,
-    title: "Proyect 6",
-    description: "description 6",
-    image: "/images/my-anime-info.webp",
-    githubURL: "",
-    liveURL: "",
-  },
-  {
-    id: 7,
-    title: "Proyect 7",
-    description: "description 7",
-    image: "/images/my-anime-info.webp",
-    githubURL: "",
-    liveURL: "",
-  },
-  {
-    id: 8,
-    title: "Proyect 8",
-    description: "description 8",
-    image: "/images/my-anime-info.webp",
-    githubURL: "",
+    title: "Eperdemic",
+    description:
+      "Proyecto backend desarrollado con Spring Boot para una aplicación que simula la propagación de un virus ficticio llamado Mechanus E534. El sistema forma parte de una solución colaborativa entre médicos, ingenieros y espiritistas, destinada a modelar y analizar epidemias paranormales.",
+    image: "/images/eperdemic.webp",
+    githubURL:
+      "https://github.com/matulai/Estrategas-y-persistentes-TP/tree/main",
     liveURL: "",
   },
   {
     id: 1,
     title: "My Anime Info",
     description:
-      "This is an anime info app, it uses the Jikan API to get the data and React to build the UI and TypeScript to type the data.",
+      "My Anime Info es una aplicación de información sobre anime como animes de estreno, randoms, buscar por nombre, etc. Utiliza la API de Jikan para obtener los datos, React para construir la interfaz de usuario y TypeScript para tipar los datos.",
     image: "/images/my-anime-info.webp",
-    githubURL: "",
-    liveURL: "",
+    githubURL: "https://github.com/matulai/My-Anime-Info",
+    liveURL: "https://matulai.github.io/My-Anime-Info/",
   },
   {
     id: 2,
-    title: "Proyect 2",
-    description: "description 2",
-    image: "/images/my-anime-info.webp",
-    githubURL: "",
-    liveURL: "",
+    title: "Pokemon Info",
+    description:
+      "Pokemon Info es una aplicación de información sobre pokemons. Utiliza la API de Jikan para obtener los datos, React para construir la interfaz de usuario y TypeScript para tipar los datos.",
+    image: "/images/pokemon-info.webp",
+    githubURL: "https://github.com/matulai/Pokemons-info",
+    liveURL: "https://shimmering-tarsier-51ba89.netlify.app/",
   },
   {
     id: 3,
-    title: "Proyect 3",
-    description: "description 3",
-    image: "/images/my-anime-info.webp",
-    githubURL: "",
-    liveURL: "",
-  },
-  {
-    id: 4,
-    title: "Proyect 4",
-    description: "description 4",
-    image: "/images/my-anime-info.webp",
-    githubURL: "",
-    liveURL: "",
-  },
-  {
-    id: 5,
-    title: "Proyect 5",
-    description: "description 5",
-    image: "/images/my-anime-info.webp",
-    githubURL: "",
-    liveURL: "",
+    title: "Pokemon Info",
+    description:
+      "Pokemon Info es una aplicación de información sobre pokemons. Utiliza la API de Jikan para obtener los datos, React para construir la interfaz de usuario y TypeScript para tipar los datos.",
+    image: "/images/pokemon-info.webp",
+    githubURL: "https://github.com/matulai/Pokemons-info",
+    liveURL: "https://shimmering-tarsier-51ba89.netlify.app/",
   },
 ];
 

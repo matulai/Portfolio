@@ -16,7 +16,7 @@ const Curriculum = () => {
         />
       </div>
       <a
-        href="/files/CV_MatiasLaime.pdf"
+        href="/files/MatiasLaime_CV.pdf"
         download
         className="flex items-center justify-start gap-2 px-4 py-2 text-2xl cursor-pointer bg-dark-light hover:bg-grey-dark hover:text-black 2xl:py-3"
       >
