@@ -9,7 +9,7 @@ const proyects: Proyect[] = [
     id: 4,
     title: "TikTok Clone",
     description:
-      "Aplicación web que simula la interfaz de TikTok, utiliza React y esta adaptado a mobile utilizando React Native. La API fue desarrollada con Javalin.",
+      "Tiktok Clone es una aplicación web en la cual su diseño se baso en la interfaz de TikTok, utiliza React para el desarrollo de interfaces, se desarrollo la app para mobiles utilizando React Native y la API fue desarrollada con Javalin.",
     image: "/images/tiktok.webp",
     githubURL: "https://github.com/matulai/TikTok-model-TPs-UI",
     liveURL: "",
@@ -18,7 +18,7 @@ const proyects: Proyect[] = [
     id: 5,
     title: "Rivals Tactics",
     description:
-      "De la mano del motor de videojuegos Godot aparece Rivals Tactics que desafía a los jugadores a dominar el campo de batalla mediante estrategia pura y adaptabilidad",
+      "De la mano del motor de videojuegos Godot aparece Rivals Tactics que es un juego con el objetivo de desafíar a los jugadores a dominar el campo de batalla mediante estrategia pura y adaptabilidad en un combate 1 contra 1 de pura acción.",
     image: "/images/rivals.webp",
     githubURL: "https://github.com/matulai/videojuego-rival-tactics",
     liveURL: "https://matulai.github.io/videojuego-rival-tactics/",
@@ -27,7 +27,7 @@ const proyects: Proyect[] = [
     id: 6,
     title: "Eperdemic",
     description:
-      "Proyecto backend desarrollado con Spring Boot para una aplicación que simula la propagación de un virus ficticio llamado Mechanus E534. El sistema forma parte de una solución colaborativa entre médicos, ingenieros y espiritistas, destinada a modelar y analizar epidemias paranormales.",
+      "Eperdemic es una aplicación desarrollada con Spring Boot que simula la propagación de un virus ficticio llamado Mechanus E534, en el cual se trabajo con diferentes tecnologias como JDBC, Hibernate, Spring, Neo4j, MongoDB, MySQL y Couchbase.",
     image: "/images/eperdemic.webp",
     githubURL:
       "https://github.com/matulai/Estrategas-y-persistentes-TP/tree/main",
@@ -46,19 +46,19 @@ const proyects: Proyect[] = [
     id: 2,
     title: "Pokemon Info",
     description:
-      "Pokemon Info es una aplicación de información sobre pokemons. Utiliza la API de Jikan para obtener los datos, React para construir la interfaz de usuario y TypeScript para tipar los datos.",
+      "Pokemon Info es una aplicación en la que podras buscar y ver la infomación de todos pokemones, incluso su gruñido. Utiliza la API de PokeAPI para obtener los datos, React para construir la interfaz de usuario y TypeScript para tipar los datos.",
     image: "/images/pokemon-info.webp",
     githubURL: "https://github.com/matulai/Pokemons-info",
     liveURL: "https://shimmering-tarsier-51ba89.netlify.app/",
   },
   {
     id: 3,
-    title: "Pokemon Info",
+    title: "Portfolio",
     description:
-      "Pokemon Info es una aplicación de información sobre pokemons. Utiliza la API de Jikan para obtener los datos, React para construir la interfaz de usuario y TypeScript para tipar los datos.",
-    image: "/images/pokemon-info.webp",
-    githubURL: "https://github.com/matulai/Pokemons-info",
-    liveURL: "https://shimmering-tarsier-51ba89.netlify.app/",
+      "Portfolio es una aplicación web en la que me podras conocer, conocer acerca de mis proyectos personales, experiencias laborales y maneras de contactarme. Utiliza Next para construir la interfaz de usuario y TypeScript para tipar los datos.",
+    image: "/images/portfolio.webp",
+    githubURL: "https://github.com/matulai/Portfolio",
+    liveURL: "",
   },
 ];
 
