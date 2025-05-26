@@ -20,11 +20,11 @@ export default function Home() {
             <p>
               Mi nombre es Matías Laime, soy programador y estudiante de
               Licenciatura en Informática en la Universidad de Quilmes. Tengo
-              experiecia desarrollando aplicaciones front y back en proyectos
-              academicos y personales. Me apasiona crear soluciones eficientes,
+              experiencia desarrollando aplicaciones front y back en proyectos
+              acadeéicos y personales. Me apasiona crear soluciones eficientes,
               escalables y bien estructuradas, siempre buscando aprender y
-              mejorar. Ademas me gusta jugar videojuegos y tambien
-              desarrollarlos.
+              mejorar. Ademas de desarrollar software me gusta jugar videojuegos
+              y tambien desarrollarlos, nadar y leer libros.
             </p>
           </div>
         </div>

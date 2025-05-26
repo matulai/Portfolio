@@ -9,7 +9,7 @@ import Chevron from "@/components/Chevron";
 const navItems = [
   { label: "SOBRE MÍ", href: "/" },
   { label: "PROYECTOS", href: "/proyects" },
-  { label: "EXPERIENCIA", href: "/experiencia" },
+  { label: "EXPERIENCIA", href: "/experience" },
   { label: "CONTACTO", href: "/contact" },
 ];
 
