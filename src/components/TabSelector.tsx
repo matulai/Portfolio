@@ -19,9 +19,7 @@ const TabSelector = ({ activeTab, setActiveTab, tabs }: TabSelectorProps) => {
             key={tab.label}
             onClick={() => setActiveTab(tab)}
             className={`px-4 py-2 text-left text-2xl cursor-pointer hover:bg-grey-dark hover:text-black ${
-              activeTab === tab
-                ? "scale-y-110 bg-grey-dark text-black"
-                : "bg-dark-light"
+              activeTab === tab ? "bg-grey-dark text-black" : "bg-dark-light"
             } 2xl:text-4xl 2xl:py-3`}
           >
             {tab.label}
