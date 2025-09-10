@@ -19,12 +19,13 @@ export default function Home() {
           <div className="py-6 px-9 text-base lg:text-xl 2xl:py-9 2xl:px-12 2xl:text-3xl">
             <p>
               Mi nombre es Matías Laime, soy programador y estudiante de
-              Licenciatura en Informática en la Universidad de Quilmes. Tengo
-              experiencia desarrollando aplicaciones front y back en proyectos
-              acadeéicos y personales. Me apasiona crear soluciones eficientes,
-              escalables y bien estructuradas, siempre buscando aprender y
-              mejorar. Ademas de desarrollar software me gusta jugar videojuegos
-              y tambien desarrollarlos, nadar y leer libros.
+              Licenciatura en Informática en la Universidad Nacional de Quilmes.
+              Tengo experiencia desarrollando interfaces de usuario y
+              aplicaciones del lado del servidor en proyectos académicos y
+              personales. Me apasiona crear soluciones eficientes, escalables y
+              bien estructuradas, siempre buscando aprender y mejorar. Además de
+              desarrollar software me gusta jugar videojuegos y tambien
+              desarrollarlos, nadar y leer libros.
             </p>
           </div>
         </div>

@@ -5,13 +5,13 @@ import Image from "next/image";
 const Curriculum = () => {
   return (
     <div className="flex flex-col gap-3 px-6 py-4">
-      <div className="relative flex-1 aspect-video">
+      <div className="relative aspect-video">
         <Image
           src="/images/curriculum.webp"
           alt="Curriculum"
           fill
           sizes="100%"
-          style={{ objectFit: "cover" }}
+          style={{ objectFit: "contain" }}
           priority={true}
         />
       </div>
