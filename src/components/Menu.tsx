@@ -31,7 +31,7 @@ const Menu = () => {
       </div>
 
       <div
-        className={`absolute top-0 left-0 bottom-0 flex flex-col items-start gap-4 p-4 w-full max-w-72 h-full z-50 bg-dark-hard
+        className={`fixed top-0 left-0 bottom-0 flex flex-col items-start gap-4 p-4 w-full max-w-72 min-h-screen z-50 bg-dark-hard
          transition-transform duration-200 ease-in-out
          ${isOpen ? "translate-x-0" : "-translate-x-full pointer-events-none"}`}
       >
